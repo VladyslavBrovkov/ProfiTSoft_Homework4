@@ -13,10 +13,9 @@ import java.io.IOException;
 public class UserInfoServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request,
-                         HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("userInfo", UserRepository.getAllUsers());
         request.getRequestDispatcher("userInfo.jsp").forward(request, response);
     }
+
 }
