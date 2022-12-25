@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Simple in-memory user repository with web-app users
+ */
 public class UserRepository {
     private static final List<User> users;
 

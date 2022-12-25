@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Authentication Filter for checking users status before web pages loaded
+ */
 @WebFilter(filterName = "AuthenticationFilter", urlPatterns = "/*")
 public class AuthenticationFilter implements Filter {
 
@@ -13,13 +16,13 @@ public class AuthenticationFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpServletResponse httpServletResponse = (HttpServletResponse) response;
-        if (authFilter(httpServletRequest, httpServletResponse)) {
+        if (checkAuthStatus(httpServletRequest, httpServletResponse)) {
             return;
         }
         chain.doFilter(request, response);
     }
 
-    private boolean authFilter(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws ServletException, IOException {
+    private boolean checkAuthStatus(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws ServletException, IOException {
         Boolean authentication = (Boolean) httpRequest.getSession().getAttribute("authenticated");
         switch (httpRequest.getRequestURI()) {
             case "/login", "/" -> {

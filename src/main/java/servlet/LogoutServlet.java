@@ -19,7 +19,6 @@ public class LogoutServlet extends HttpServlet {
     private void removeSessionAttributes(HttpSession session) {
         session.removeAttribute("authenticated");
         session.removeAttribute("credentials_error");
-        session.removeAttribute("userFullName");
         session.removeAttribute("userInfo");
     }
 }

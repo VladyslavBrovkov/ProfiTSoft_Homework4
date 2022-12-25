@@ -2,6 +2,9 @@ package model;
 
 import java.util.Objects;
 
+/**
+ * Model class for web-app users
+ */
 public class User {
     private Integer id;
     private String email;
