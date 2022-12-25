@@ -1,4 +1,12 @@
 # ProfiTSoft_Homework4
+
+# WebApp Run FAQ:
+
+- Use WebAppRunner class method main to run WebApp. 
+- Go to http://localhost:8888 to get the start page
+- You can change PORT value optionally
+
+
 # Task1
 Розробити веб-застосунок з функцією автентифікації.Повинна бути сторінка, на якій користувач вводить логін і пароль, та кнопка "Login".
 Якщо користувач не вводить хоча б одне з цих полів або вони неправильні, користувачу відображається та сама сторінка з повідомленням про помилку.
@@ -10,8 +18,3 @@
 Список користувачів можна тримати в пам'яті і "зашити" в коді. Підключення БД в даному завданні не передбачено.
 Можна використовувати або чисті Servlets+JSP, або Spring MVC (+JSP).
 Spring Security в цьому завданні прохання не використовувати (щоб було менше магії, і ви отримали досвід, як такі речі можуть працювати "під капотом").
-
-WebApp Run FAQ:
-
--Use WebAppRunner class method main to run WebApp. Set PORT for embedded Tomcat.
--Go to http://localhost:PORT to get the start page
