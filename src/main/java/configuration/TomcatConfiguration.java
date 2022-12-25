@@ -9,11 +9,11 @@ import org.apache.catalina.webresources.StandardRoot;
 
 import java.io.File;
 
-
 /**
  * Class for Embedded Tomcat configuration
  */
 public class TomcatConfiguration {
+
     private static final Tomcat tomcat = new Tomcat();
 
     public static void startTomcat(Integer webPort) {
